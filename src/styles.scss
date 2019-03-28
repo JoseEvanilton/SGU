@@ -1,0 +1,258 @@
+@import '../src/assets/css/shared.scss';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.mat-toolbar {
+  background: #FFCA28 !important;
+  font-size: 46px;
+  font-weight: 600;
+}
+
+.table-prime {
+  .ui-table .ui-table-tbody>tr:nth-child(even) {
+    background-color: transparent;
+  }
+
+  .table-space-tiny {
+    width: 30px !important;
+  }
+
+  .ui-widget-header {
+    background: transparent !important;
+    border: none !important;
+    margin-bottom: 5px;
+    margin-top: 10px;
+  }
+
+  .ui-table .ui-table-thead>tr>th,
+  .ui-table .ui-table-tfoot>tr>td {
+    text-align: center;
+    color: GRAY;
+    border: none;
+    border-color: transparent !important;
+    background-color: transparent !important;
+    background: #FFECB3 !important;
+    font-size: 18px;
+  }
+
+  .ui-table .ui-table-tbody>tr>td {
+    font-size: 15px;
+    color: gray;
+    background-color: transparent;
+    height: 60px;
+    border: none !important;
+  }
+
+  .ui-table .ui-table-tbody>tr {
+    border-bottom: 1px solid gray !important;
+    border-top: 1px solid gray !important;
+    background-color: #FFECB3 !important;
+  }
+
+  .ui-table-responsive .ui-table-tbody>tr> {
+    :first-child {
+      text-align: center !important;
+
+
+    }
+  }
+
+  .ui-table.ui-table-responsive .ui-table-tbody>tr>td {
+    text-align: center !important;
+    .img {
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      margin-top: 10px;
+    }
+
+
+    .table-prime .ui-table .ui-table-tbody>tr>td {
+      height: 0px !important;
+    }
+  }
+
+  .ui-table .ui-table-thead>tr>th,
+  .ui-table .ui-table-tbody>tr>td,
+  .ui-table .ui-table-tfoot>tr>td {
+    padding: 0;
+  }
+
+  a {
+    border-radius: 20% !important;
+    width: 33px;
+    height: 33px;
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    color: $_Primary;
+    margin: 10px;
+    border: solid 1px gray !important;
+    line-height: 25px;
+  }
+
+  .ui-widget-content {
+    background-color: white !important;
+  }
+
+  .column-config {
+    width: 250px;
+  }
+
+  .text-left th {
+    text-align: left;
+  }
+
+  .ui-cell-data {
+    font-size: 15px;
+    color: gray;
+  }
+
+  .fa-unsorted:before,
+  .fa-sort:before {
+    color: #FFECB3 !important;
+  }
+
+  .ui-widget-header {
+    background: white !important;
+    border: none !important;
+  }
+
+  .ui-chkbox-icon.fa.fa-check {
+    color: white;
+    margin-top: -2px;
+    margin-left: -1px;
+  }
+
+  .fa-circle:before {
+    content: "\f00c";
+  }
+
+  .fa-check:before {
+    content: "\f00c";
+  }
+
+  .ui-paginator {
+    text-align: left;
+    width: 400px !important;
+    background-color: transparent !important;
+    border-color: transparent !important;
+    // margin-top: -99px;
+  }
+
+  .ui-paginator .fa {
+    color: gray !important;
+    vertical-align: middle;
+  }
+
+  .ui-paginator-first {
+    display: none !important;
+  }
+
+  .ui-paginator-last {
+    display: none !important;
+  }
+
+  .ui-paginator-page.ui-paginator-element.ui-state-default {
+    border: none;
+    font-size: 14px;
+    color: gray !important;
+    background-color: transparent;
+  }
+
+  .ui-datatable th.ui-state-active {
+    color: none !important;
+  }
+
+  .ui-paginator-page.ui-paginator-element.ui-state-default.ui-state-active {
+    border-radius: 20% !important;
+    border: solid 1px gray !important;
+    background-color: #FFECB3;
+    font-size: 15px;
+    font-weight: bold;
+    color: black !important;
+  }
+
+  .ui-state-default {
+    border: 1px solid white;
+  }
+
+  .fa-forward:before {
+    content: "\F054";
+  }
+
+  .fa-backward:before {
+    content: "\F053";
+  }
+
+  .fa-unsorted:before,
+  .fa-sort:before {
+    color: white !important;
+  }
+
+  .action-btn-area {
+    display: none !important;
+    position: absolute !important;
+    width: 200px;
+    right: 30px;
+    padding: .5em 0 !important;
+    top: -20px;
+    text-align: right !important;
+  }
+
+  .action-btn-column {
+    position: initial !important;
+    display: table-cell !important;
+    right: 205px !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+  }
+
+  ::-webkit-scrollbar-button {
+    display: block;
+    height: 7px;
+    border-radius: 0px;
+    background-color: gray;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: gray;
+    border: 0px none white;
+    border-radius: 54px !important;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: $_Primary;
+  }
+
+  ::-webkit-scrollbar-thumb:active {
+    background: $_Primary;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: gray;
+    border: 0px none white;
+    border-radius: 50%;
+  }
+
+  ::-webkit-scrollbar-track:hover {
+    background: gray;
+  }
+
+  ::-webkit-scrollbar-track:active {
+    background: gray;
+  }
+
+  ::-webkit-scrollbar-corner {
+    background: transparent;
+  }
+}

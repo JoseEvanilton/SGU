@@ -1,0 +1,51 @@
+<div class="row ml-5 mt-5">
+  <div class="col-12 col-sm-12 col-md-12 col-lg-9">
+    <p-table class="table-prime" [columns]="cols" [value]="data" [responsive]="true" sortMode="multiple"
+      [paginator]="true" [rows]="listTable?.per_page" [totalRecords]="data.length">
+      <ng-template pTemplate="header" let-columns>
+        <tr>
+          <th></th>
+          <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+            {{col.header}}
+          </th>
+        </tr>
+      </ng-template>
+      <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr>
+          <td>
+            <img class="img" src="{{rowData.avatar}}" height="50" width="50">
+          </td>
+          <td>
+            {{rowData.first_name}}
+          </td>
+          <td>
+            {{rowData.last_name}}
+          </td>
+          <td>
+            <button mat-raised-button class="mx-3" (click)="putList(rowData)">Editar</button>
+            <button mat-raised-button class="mx-3" (click)="delete(rowData)">Excluir</button>
+          </td>
+        </tr>
+      </ng-template>
+    </p-table>
+  </div>
+  <div class="col-12 col-sm-12 col-md-12 col-lg-3">
+    <form [formGroup]="userForm">
+      <mat-form-field class="mx-3">
+        <input matInput formControlName="firstName" placeholder="Nome">
+        <mat-error *ngIf="userForm.controls['firstName'].hasError('required')">Campo Obrigadorio
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field class="mx-3">
+        <input matInput formControlName="lastName" placeholder="Sobrenome">
+        <mat-error *ngIf="userForm.controls['lastName'].hasError('required')">Campo Obrigadorio
+        </mat-error>
+      </mat-form-field>
+      <div class="m-3">
+        <button class="mx-2" mat-raised-button *ngIf="!isEdit" [disabled]="userForm.invalid" (click)="postUser()">Criar</button>
+        <button class="mx-2" mat-raised-button *ngIf="isEdit" [disabled]="userForm.invalid" (click)="salve()">Salvar</button>
+        <button class="mx-2" mat-raised-button *ngIf="isEdit" [disabled]="userForm.invalid" (click)="cancel()">Cancelar</button>
+      </div>
+    </form>
+  </div>
+</div>
